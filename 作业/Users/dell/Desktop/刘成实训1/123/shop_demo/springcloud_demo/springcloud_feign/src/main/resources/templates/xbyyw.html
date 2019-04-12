@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)http://www.xb1y.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>西北医药网-更专业的医药交易服务平台</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="/西北医药网-更专业的医药交易服务平台_files/common.css">
+<link rel="stylesheet" href="/西北医药网-更专业的医药交易服务平台_files/css.css">
+<script src="/西北医药网-更专业的医药交易服务平台_files/jQuery-2.2.0.min.js.下载"></script>
+<script src="/西北医药网-更专业的医药交易服务平台_files/layer.js.下载"></script><link rel="stylesheet" href="/西北医药网-更专业的医药交易服务平台_files/layer.css" id="layui_layer_skinlayercss" style="">
+<!--[if lt IE 9]>
+<script src="/Public/houtai/bootstrap/js/html5shiv.min.js"></script>
+<script src="/Public/houtai/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+<link rel="shortcut  icon" type="image/x-icon" href="http://www.xb1y.com/favicon.ico" media="screen">
+
+    
+<script type="text/javascript" src="/西北医药网-更专业的医药交易服务平台_files/jquery.SuperSlide.2.1.1.js.下载"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        var Lis = document.getElementsByTagName("li");
+        for (i = 0; i < Lis.length; i++) {
+            Lis[i].onmouseover = function () {
+                this.className = "lihover";
+            }
+
+            Lis[i].onmouseout = function () {
+                this.className = "";
+            }
+        }
+
+    }
+</script>
+
+    <link rel="shortcut  icon" type="image/x-icon" href="http://www.xb1y.com/favicon.ico" media="screen">
+</head>
+<body class="hold-transition skin-blue sidebar-mini" id="app">
+<div class="wrapper">
+    <header class="main-header">
+<div class="logotop">
+    <div class="logotop-bar">
+        <div class="logotop-lf">
+            Hi,欢迎来到西北医药网
+            <span>
+                【
+                <a href="http://www.xb1y.com/index.php/Home/Member/Member_login.html" style="color: #e57816;">请先登录</a>
+                |
+                <a href="http://www.xb1y.com/index.php/Home/Member/Member_register.html">注册</a>
+                                】
+            </span>
+        </div>
+        <ul class="logotop-rt">
+            <li>服务热线：400-0097-600</li>
+            <li><a href="http://www.xb1y.com/index.php/Home/MemberBuyer/MyOrder.html">我的订单 </a></li>
+            <li class=""><a href="http://www.xb1y.com/index.php/Home/Goods/user_cart.html">我的购物车</a></li> 
+            <li><a href="http://www.xb1y.com/#">帮助中心</a></li>
+            <li><a href="http://www.xb1y.com/#">收藏网站</a></li>
+        </ul>
+    </div>
+</div>
+<!--logo栏目-->
+<div class="logobox" style="overflow:initial;height:120px;">
+    <div class="logoimg">
+        <a href="http://www.xb1y.com/index.php/Home/Index/index.html">
+            <img src="/西北医药网-更专业的医药交易服务平台_files/index_03.png" width="303" height="125">
+        </a>
+    </div>
+    <div class="logobox-rt" style="overflow:initial">
+        <form action="http://www.xb1y.com/index.php/Home/Index/search.html" method="get">
+            <div class="search-box" style="overflow:initial">
+                <input type="text" class="ss-input" name="key" value="" placeholder="请输入关键字进行搜索">
+                <button type="submit">搜索</button>
+				<div class="input-xlbox" id="zhaode">
+					
+						
+					
+				</div>
+            </div>
+        </form>
+		<script>
+			
+			$("body").on("input propertychange",".ss-input",function(){
+				 var name=$(".ss-input").val();
+				  // alert(name);
+				   $.ajax({
+						type:'post',
+						url:"/index.php/Home/Index/see.html",
+						data:{'name':name},
+						success:function(data){
+							if(data.state=='1'){
+								var html="";
+								//console.log(data.temp)
+								for(var i=0;i<data.temp.length;i++){
+									html +="<div class='xl-list' inclick>"+data.temp[i].goods_name +"</div>";
+								}
+								
+							   $("#zhaode").html(html);
+								
+							}
+						}
+					});
+				
+			}) 
+			var text22 = '';
+			$("#zhaode").on('mouseover',"div", function(){
+				 text22 = $(this).html()
+			    //$('.ss-input').val()
+			})
+			$('.ss-input').focus(function(){
+				$('.input-xlbox').show();
+				$('.input-xlbox').css('zIndex','999');
+				$('.input-xlbox').css('opacity','1');
+			});
+			$('.ss-input').blur(function(){
+				$('.input-xlbox').css('zIndex','-1');
+				$('.input-xlbox').css('opacity','0');
+				$(this).val(text22)
+			});
+			
+		</script>
+		<style>
+		.input-xlbox{position: absolute;width:350px;top:41px;left:-1px;background:#fff;border:1px solid #ff912f;display:none;}
+		.xl-list{width:100%;padding:5px;box-sizing:border-box;}
+		.xl-list:hover{background:#f2f2f2}
+		</style>
+        <div style="float:right;">
+					
+			  <a href="http://www.xb1y.com/index.php/Home/MemberBuyer/MemberBuyer_lackmedicine_add.html" class="drug-register">
+                <img src="/西北医药网-更专业的医药交易服务平台_files/index_06.png"> 缺药登记
+            </a>
+			
+		             <a href="http://www.xb1y.com/index.php/Home/Goods/user_cart.html" class="myshopping">
+                <img src="/西北医药网-更专业的医药交易服务平台_files/index_08.png">
+                我的购物车
+            </a> 
+        </div> 
+    </div>
+</div>
+<!--导航-->
+<div class="navbar">
+    <div class="navbox">
+        <h3>药品分类</h3>
+        <ul class="navbar-list">
+            <li class=""><a href="http://www.xb1y.com/index.php/Home/Index/index.html">首页</a></li>
+            <li class=""><a href="http://www.xb1y.com/index.php/Home/Agent/index.html">招商/代理</a></li>
+            <li class=""><a href="http://www.xb1y.com/index.php/Home/Board/index.html">上榜企业</a></li>
+            <li class=""><a href="http://www.xb1y.com/index.php/Home/Information/index.html">数据中心</a></li>
+            <li class=""><a href="http://www.xb1y.com/index.php/Home/Article/index.html">资讯平台</a></li>
+            <li class=""><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html">医药会展</a></li>
+            <li class=""><a href="http://www.xb1y.com/index.php/Home/Activityzone/index.html">活动专区</a></li> 
+        </ul>
+    </div>
+</div>
+</header>
+<div class="xb-rightbox">
+	<a href="http://www.xb1y.com/index.php/Home/Member/Member_index.html">
+		<div class="xb-right_list">
+			<img alt="" src="/西北医药网-更专业的医药交易服务平台_files/gr.png">
+			我的
+		</div>
+	</a>
+	 <a href="http://www.xb1y.com/index.php/Home/MemberBuyer/MyOrder.html">
+		<div class="xb-right_list">
+			<img alt="" src="/西北医药网-更专业的医药交易服务平台_files/dd.png">
+			订单
+		</div>
+	</a>
+	<a href="http://www.xb1y.com/index.php/Home/Goods/user_cart.html">
+		<div class="xb-right_list">
+			<img alt="" src="/西北医药网-更专业的医药交易服务平台_files/gwc.png">
+			购物车
+	
+		</div>
+	</a>
+	<a href="http://www.xb1y.com/#">
+		<div class="xb-right_list">
+			<img alt="" src="/西北医药网-更专业的医药交易服务平台_files/tw.png">
+			帮助
+		</div>
+	</a>
+	<a href="http://www.xb1y.com/#">
+		<div class="xb-right_list">
+			<img alt="" src="/西北医药网-更专业的医药交易服务平台_files/sc.png">
+			收藏
+		</div>
+	</a>
+</div>
+<style>
+.xb-rightbox{width:50px;height:655px;position: fixed;right:0;top:15%;background: #377bee;border-radius: 5px;padding:0 2.5px;box-sizing:border-box;color:#fff;text-align:center;}
+.xb-right_list{color:#fff;margin-top:50px;}
+.xb-right_list img{width:36px;}
+.xb-qq{margin:5px auto;width:20px;height:20px;border-radius:50%;background:#ff5a00;line-height:20px;font-size:12px;}
+</style>
+    <div class="content-wrapper">
+    <section class="content-header">
+        
+
+    </section>
+    <section class="content">
+        
+<!--导航轮播图片-->
+<div class="navpic-slider">
+    <ul class="topmenu">
+    	<li><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1.html">中西药品</a>
+            <div class="submenu">
+                <div class="leftdiv">
+                	<dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/2.html">家庭常备</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/3.html">风热感冒</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/4.html">中暑</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/5.html">空调病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/6.html">止咳化痰</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/7.html">发烧头痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/8.html">咽喉肿痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/9.html">消炎清热</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/10.html">牙痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/11.html">口腔溃疡</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/12.html">慢性咽炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/13.html">病毒感冒</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/14.html">扁桃体炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/15.html">过敏性鼻炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/16.html">清热解毒</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/17.html">消炎镇痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/18.html">跌打损伤</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/19.html">其他 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/934.html">解热镇痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/935.html">消炎退热</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/939.html">感冒</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/946.html">上呼吸道感染</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1006.html">口腔科</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1011.html">化痰止咳</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/20.html">男科用药</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/21.html">阳痿早泄</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/22.html">滋肝补肾</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/23.html">少精无精</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/24.html">前列腺炎/肥大</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/25.html">前列腺增生</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/26.html">滋阴壮阳</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/27.html">综合滋补</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/28.html">性功能障碍</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/29.html">脱发/少发</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/840.html">其他</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/944.html">滋补肝肾</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1018.html">前列腺炎\肥大</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1038.html">滋阴补肾</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1041.html">脱发</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/30.html">妇科用药</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/31.html">调经止带用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/32.html">妇科炎症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/33.html">乳腺疾病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/34.html">妇科内分泌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/35.html">避孕药类</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/36.html">更年期综合症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/37.html">宫颈糜烂</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/38.html">慢性盆腔炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/39.html">阴道炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/40.html">孕期滋补</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/41.html">不孕不育</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/42.html">孕妇用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/43.html">子宫疾病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/44.html">用药保胎促孕药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/45.html">产前后疾病用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/46.html">妇科外用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/47.html">补血养气</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/48.html">滋补养肾</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/813.html">其他</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/857.html">活血养气</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/858.html">活血补气</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/859.html">产前后用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/943.html">补养气血</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/974.html">更年期综合征</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1004.html">月经不调</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1024.html">调经止带</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1043.html">乳腺增生</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1065.html">补气养血</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1074.html">补血益气</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1099.html">盆腔炎</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/50.html">心脑血管</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/51.html">脑血管疾病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/52.html">心血管疾病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/53.html">心脏疾病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/54.html">脑疾病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/55.html">高血压</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/56.html">糖尿病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/57.html">冠心病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/58.html">高血脂</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/59.html">中风</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/60.html">偏瘫</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/61.html">动脉硬化</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/62.html">血液疾病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/63.html">眩晕症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/64.html">心律失常</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/65.html">静脉曲张</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/66.html">心绞痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/67.html">心肌炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/68.html">低血压</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/69.html">低血糖</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/70.html">高血糖</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/71.html">心律不齐</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/72.html">心力衰竭</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/841.html">其他</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/945.html">高脂血症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/970.html">冠心病，心绞痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/978.html">脑血管病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/987.html">冠心病心绞痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1012.html">高血脂症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1023.html">活血通络</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1039.html">心脑血管疾病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1056.html">冠心病 ，心绞痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1061.html">眩晕</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1062.html">心率异常</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/73.html">风湿骨伤</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/74.html">风湿类风湿</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/75.html">骨关节炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/76.html">腰椎病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/77.html">骨质疏松</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/78.html">痛风</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/79.html">骨质增生</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/80.html">股骨头炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/81.html">活血通络</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/82.html">肩周炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/83.html">颈椎病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/84.html">腰肌劳损</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/85.html">坐骨神经痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/86.html">腰间盘突出</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/87.html">活血止痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/88.html">滑膜炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/89.html">骨骼肌痉挛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/842.html">其他</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/997.html">中风</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1075.html">风湿性风湿</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1086.html">强直性脊柱炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1089.html">活血化瘀</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1096.html">关节炎</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/90.html">儿科用药</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/91.html">小儿发烧</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/92.html">感冒</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/93.html">健胃消食</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/94.html">小儿湿疹</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/95.html">小儿厌食</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/96.html">小儿胀气</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/97.html">小儿呕吐</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/98.html">打虫</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/99.html">小儿惊风</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/100.html">痱子湿疹</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/101.html">多动症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/102.html">病毒感染</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/103.html">儿童便秘/腹泻</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/104.html">肠道菌群失调</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/105.html">儿童贫血</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/106.html">小儿止咳化痰</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/107.html">小儿肺炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/108.html">气管炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/109.html">儿童哮喘</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/843.html">其他</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/947.html">健脾消食</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1040.html">化痰止咳</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1055.html">小儿便秘/腹泻</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1097.html">小儿化痰止咳</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/110.html">五官科用药</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/111.html">眼科</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/112.html">鼻科</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/113.html">喉科</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/114.html">耳科</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/115.html">口腔科</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/845.html">其他</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/911.html">口腔</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/994.html">鼻炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1025.html">牙科</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/116.html">肠胃用药</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/117.html">胃胀/痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/118.html">胃炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/119.html">胃溃疡</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/120.html">返酸恶心呕吐</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/121.html">肠炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/122.html">便秘</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/123.html">痔疮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/124.html">十二指肠溃疡</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/125.html">消化不良</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/126.html">腹泻腹痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/127.html">胃肠功能紊乱</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/128.html">解暑化湿</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/839.html">其他</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/846.html"></a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/932.html">反酸恶心呕吐</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/933.html">胃溃疡/十二指肠溃疡</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/940.html">胃肠溃疡</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/986.html">胃痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1007.html">胃肠炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1021.html">胃胀\痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1060.html">胃痛/胀</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1085.html">慢性胃炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1103.html">溃疡</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/129.html">肝胆 用药</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/130.html">解酒护肝</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/131.html">乙肝用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/132.html">肝炎用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/133.html">胆囊炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/134.html">疏肝理气</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/135.html">黄疸类药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/136.html">胆结石</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/137.html">脂肪肝类胰腺炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/138.html">肝硬化</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/139.html">阑尾炎</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/140.html">皮肤用药</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/141.html">去疤痕</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/142.html">皮炎湿疹</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/143.html">银屑病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/144.html">痤疮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/145.html">白癜风</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/146.html">皮肤瘙痒</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/147.html">烧烫伤</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/148.html">蚊虫叮咬</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/149.html">脚气</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/150.html">手足癣</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/151.html">皮肤外伤感染</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/152.html">干裂冻疮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/153.html">荨麻疹</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/154.html">青春痘</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/155.html">黄褐斑</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/156.html">过敏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/157.html">灰指甲</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/158.html">艾滋病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/159.html">梅毒</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/160.html">尖锐湿疣</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/161.html">带状疱疹</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/848.html">其他</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/925.html"> 痤疮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1017.html">手足藓</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/162.html">泌尿科用药</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/163.html">结石</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/164.html">睾丸炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/165.html">尿崩症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/166.html">尿毒症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/167.html">尿路感染用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/168.html">尿路结石用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/169.html">水肿</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/170.html">肾炎肾癌用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/171.html">肾病综合症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/172.html">肾结石用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/173.html">膀胱炎用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/816.html">尿路感染</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/817.html">尿路结石</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/849.html">其他</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/990.html">肾炎/肾癌用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1035.html">其他
+</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1059.html">肾炎</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/174.html"> 肿瘤科</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/175.html">肝癌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/176.html">胃癌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/177.html">乳腺癌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/178.html">肺癌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/179.html">食道癌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/180.html">白血病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/181.html">放化疗护理</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/182.html">癌症辅助</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/183.html">缓解癌症疼痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/850.html">其他</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/193.html">神经/精神系统</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/194.html">偏头疼类</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/195.html">周围神经病变</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/196.html">帕金森</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/197.html">抑郁症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/198.html">晕动症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/199.html">焦虑症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/200.html">眩晕</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/201.html">睡眠障碍</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/202.html">神经性疼痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/203.html">神经炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/204.html">神经系统其他用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/205.html">神经衰弱</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/206.html">精神分裂症</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/207.html">老年性痴呆</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/208.html">肌肉无力萎缩</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/209.html">记忆减退</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/210.html">面瘫癫痫</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/211.html">麻醉用药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/988.html">偏头痛类</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/995.html">偏正头痛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1022.html">精神系统其他用药</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/212.html">增强机体免疫力</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/213.html">免疫力调节药物</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/899.html">抗生素</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/900.html">其他</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1029.html">其他
+</a>                        </dd>
+                    </dl>                </div>
+            </div>
+        </li><li><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/214.html">医疗器械</a>
+            <div class="submenu">
+                <div class="leftdiv">
+                	<dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/215.html">血压计</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/216.html">腕式血压计</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/217.html">臂式血压计</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/218.html">台式血压计</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/219.html">普通表式</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/220.html">保健盒</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/221.html"> 制氧机</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/222.html">氧立得</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/223.html">鱼跃制氧剂</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/224.html">其他供氧器具</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/225.html">血糖仪/试纸</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/226.html">艾科</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/227.html">拜耳</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/228.html">怡成</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/229.html">欧姆龙</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/230.html">罗氏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/231.html">鱼跃</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/232.html">会好</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/233.html">强生</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/234.html">三诺 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/235.html">辅理善</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/236.html">其他类</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/851.html">其他</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/237.html">护理用具</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/238.html">护理用寝具</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/239.html">引流容器</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/240.html">洗鼻器</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/241.html">吸痰器</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/242.html">家庭检测</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/243.html">体温计</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/244.html">听诊器</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/245.html">脂肪测量仪</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/246.html">其他检测仪器</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/247.html">伤口处理</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/248.html">创可贴</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/249.html">纱布</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/250.html">绷带</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/251.html">胶布</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/252.html">棉签</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/253.html">皮肤</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/254.html">消毒脱脂棉</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/853.html">其他</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/255.html">助行器具</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/256.html">拐杖</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/257.html">轮椅</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/258.html">助行器</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/259.html">方便辅助用具</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/260.html">理疗康复</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/261.html">拔罐器</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/262.html">疝气带</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/263.html">足浴盆</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/264.html">按摩仪</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/265.html">磁疗设备</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/266.html">贴膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/267.html">冷热敷贴</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/268.html">雾化器</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/269.html">生活健康</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/270.html">口罩 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/271.html">家庭药箱 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/272.html">一般医疗用品</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/854.html">其他</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/822.html">制氧机</a></dt>
+                        <dd>
+                        	                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/909.html">家庭常备</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/910.html">其他</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/948.html">生活常备</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/949.html">一般医疗用品</a>                        </dd>
+                    </dl>                </div>
+            </div>
+        </li><li><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/273.html">成人用品</a>
+            <div class="submenu">
+                <div class="leftdiv">
+                	<dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/274.html">避孕套</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/275.html">塞呋盾</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/276.html"> 杜蕾斯</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/277.html">杰士邦</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/278.html">第6感</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/279.html">冈本</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/280.html">亚马逊</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/281.html">XJAZZ</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/282.html">大官人</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/283.html">玫瑰船</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/284.html">万极</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/285.html">双蝶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/286.html">夜曲</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/287.html">倍力乐</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/288.html">尚牌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/289.html">赤尾</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/290.html">男性用具</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/291.html">延时环</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/292.html">充气娃娃</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/293.html">飞机杯</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/294.html">震动飞机杯</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/295.html">延时套环</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/296.html">前列快感</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/297.html">女忧名器</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/298.html">胸臀倒模</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/299.html">女性用具</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/300.html">按摩棒</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/301.html">G点棒 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/302.html">震动指环</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/303.html">振动棒 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/304.html">G点玩具 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/305.html">后庭专用</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/306.html">乳房按摩器</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/307.html">穿戴用具 跳蛋</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/308.html">AV震棒</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/309.html">伸缩转珠</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/310.html">舌舔唇吸 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/311.html">私处护理</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/312.html">嘿咻机器 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/313.html">仿真玩具</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/314.html">双人情趣</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/315.html">后庭肛塞</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/316.html">男女共用 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/317.html">男同专用</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/318.html">女同专用</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/319.html">体位道具</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/320.html">SM专区</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/321.html">保健护理</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/322.html">缩阴养阴</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/323.html">延时助勃</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/324.html">迷情香水</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/325.html">丰胸美体</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/326.html">增粗增大</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/327.html">健康护理</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/328.html">验孕测卵</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/329.html">玩具护理</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/330.html">玩具配件</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/331.html">女性欲望提升</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/332.html">情趣内衣</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/333.html">套装裙装</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/334.html">连体袜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/335.html">三点式</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/336.html">性感内裤</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/337.html">吊带</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/338.html">丝袜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/339.html">制服</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/340.html">男士内衣</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/341.html">润滑/助情液</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/342.html">人体润滑液</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/343.html">按摩油</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/344.html">硅基润滑液</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/345.html">后庭润滑液 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/346.html">情趣按摩油</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/347.html">果味润滑液</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/348.html">冰火润滑液</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/349.html">水溶性润滑液</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/350.html">倍柔情</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/351.html">爱乐舫</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/352.html">人初油</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/903.html">赤尾</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/353.html">两性玩具</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/354.html">震动器 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/355.html">排珠棒 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/356.html">后庭栓</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/357.html">夹吸器</a>                        </dd>
+                    </dl>                </div>
+            </div>
+        </li><li><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/360.html">中药饮片</a>
+            <div class="submenu">
+                <div class="leftdiv">
+                	<dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/361.html">根及根茎类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/362.html">天麻</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/363.html">白术</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/364.html">丹参</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/365.html">当归</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/366.html">  人参</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/367.html">甘草</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/368.html">地黄</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/369.html">芍药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/370.html">黄芪  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/371.html">柴胡</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/372.html">旱半夏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/373.html">板蓝根</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/374.html">黄芩</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/375.html">党参</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/376.html">桔梗</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/377.html">黄连 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/378.html">浙贝母</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/379.html">伊贝母</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/380.html">川贝母</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/381.html">白芷</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/382.html">麦冬</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/383.html">三七 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/384.html">何首乌 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/385.html">山药 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/386.html"> 大黄</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/387.html"> 其它</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/880.html">大黄</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/388.html">果实类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/389.html">五味子</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/390.html">山茱萸</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/391.html">连翘</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/392.html">栀子</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/393.html">山楂</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/394.html">八角茴香</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/395.html">瓜蒌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/396.html">决明子</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/397.html">吴茱萸</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/398.html">酸枣仁</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/399.html">木瓜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/400.html">枸杞子</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/401.html">枳壳</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/402.html">女贞子</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/403.html">苦杏仁</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/404.html">柏子仁</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/405.html">覆盆子</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/406.html">枳实</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/407.html">桃仁  草果 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/408.html">牛蒡子</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/409.html">丝瓜络</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/410.html">车前子</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/411.html">金樱子</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/412.html">其它</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/881.html">桃仁草果</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/891.html">桃仁 草果</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/413.html">全草类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/414.html">白花蛇舌草</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/415.html">鱼腥草</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/416.html">青蒿</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/417.html">蒲公英</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/418.html">广金钱草</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/419.html">益母草</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/420.html">仙鹤草</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/421.html">白屈草</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/422.html">淫羊藿</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/423.html">夏枯草</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/424.html">白英</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/425.html">茵陈</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/426.html">细辛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/427.html">穿心莲</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/428.html">雪莲花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/429.html">金钱草  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/430.html">瓜子金</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/431.html">一点红 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/432.html">薄荷</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/433.html">鸡骨草</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/861.html">其它</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/893.html">半枝莲</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/894.html">北败酱</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/895.html">北刘寄奴</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/896.html">萹蓄</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/897.html">仙鹳草</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/434.html">叶类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/435.html">枇杷叶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/436.html">紫珠叶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/437.html">紫苏叶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/438.html">桑叶 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/439.html">艾叶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/440.html">银杏叶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/441.html">龙利叶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/442.html">荷叶 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/443.html">茶叶 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/444.html">大青叶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/445.html">石韦</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/446.html">棕板</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/447.html">十大功劳</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/448.html">三尖杉</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/449.html">石南叶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/450.html">柿叶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/451.html">番石榴叶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/452.html">侧柏叶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/453.html">四季青 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/454.html">苦丁茶   </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/862.html">其它</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/455.html">花类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/456.html">金银花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/457.html"> 菊花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/458.html"> 红花 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/459.html">夏枯球 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/460.html">番红花 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/461.html">槐米 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/462.html">旋覆花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/463.html">款冬花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/464.html"> 松花粉  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/465.html">密蒙花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/466.html">蒲黄</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/467.html">玫瑰花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/468.html"> 鸡蛋花 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/863.html">其它</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/882.html">红花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/883.html">蜜蒙花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/884.html">旋复花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/890.html">炒槐米</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/469.html">皮类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/470.html">杜仲</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/471.html"> 丹皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/472.html"> 厚朴</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/473.html">黄柏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/474.html">桂皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/475.html"> 白鲜皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/476.html">五加皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/477.html">桐皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/478.html">桑白皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/479.html">地骨皮 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/480.html">土荆皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/481.html">漆树皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/482.html">乌桕根皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/483.html">苦楝皮 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/484.html">花生衣 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/485.html">板栗壳</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/486.html"> 秦皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/487.html">苦皮藤</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/488.html">祖司麻  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/489.html">椿皮 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/490.html">香加皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/491.html">瓜萎皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/864.html">其它</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/886.html">白鲜皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/887.html">瓜篓皮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/888.html">厚朴</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/492.html">藤木类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/493.html">肉苁蓉 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/494.html">鸡血藤 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/495.html">皂角刺</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/496.html">锁阳</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/497.html"> 大血藤</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/498.html">石斛</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/499.html"> 钩藤 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/500.html">木通 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/501.html">鬼箭羽</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/502.html">苏木  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/503.html">夜交藤</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/504.html">桑寄生</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/505.html">雷公藤</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/506.html"> 槲寄生</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/507.html">沉香  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/865.html">其它</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/892.html">青风藤</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/898.html">钩藤</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/508.html">菌藻类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/509.html">冬虫夏草  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/510.html"> 灵芝</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/511.html">茯苓 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/512.html">猪苓 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/513.html">蛹虫草 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/514.html">海藻</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/515.html">紫芝 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/516.html">白桦茸 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/517.html">竹黄</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/518.html">昆布</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/519.html">猴头菇</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/520.html">马勃</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/521.html">雷丸 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/522.html"> 茯神</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/523.html"> 美舌藻</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/524.html">松露 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/525.html">虎掌菌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/526.html"> 灰树花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/866.html">其它</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/885.html">茯神</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/527.html">树脂类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/528.html">血竭</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/529.html">枫香脂</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/530.html">乳香</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/531.html">土沉香</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/532.html">安息香  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/533.html">阿魏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/534.html">松香</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/535.html">桃胶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/536.html">琥珀 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/537.html">没药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/538.html">天竺黄 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/539.html">苏合香</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/867.html">其它</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/540.html">动物类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/541.html">蜈蚣</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/542.html"> 水蛭</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/543.html">蟾衣</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/544.html">蛤蟆</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/545.html"> 海马</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/546.html">蟾酥</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/547.html">鹿茸</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/548.html">鳖甲</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/549.html">地龙</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/550.html">牛黄</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/551.html">乌梢蛇</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/552.html">马宝  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/553.html">壁虎龟板 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/554.html">海螵蛸</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/555.html">天龙 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/556.html">干蟾 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/557.html">五灵脂</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/558.html">刺猬 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/559.html">猴结 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/560.html"> 水牛角  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/868.html">其它</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/879.html">水蛭</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/561.html">昆虫类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/562.html">土元</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/563.html">蝉蜕</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/564.html">全蝎 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/565.html">僵蚕</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/566.html">  蜂房</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/567.html">  蚂蚁 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/568.html">其它</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/569.html">矿物类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/570.html">雄黄  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/571.html">朱砂</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/572.html">石膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/573.html">阳起石</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/574.html">青礞石  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/575.html">青矾</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/870.html">其它</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/576.html">其它类</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/577.html">红景天 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/578.html">五倍子</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/579.html">海金沙</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/580.html">薄荷油</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/581.html">桉油 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/582.html"> 冰片</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/583.html">  麦芽</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/860.html">阿胶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/869.html">其它</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/889.html">冰片</a>                        </dd>
+                    </dl>                </div>
+            </div>
+        </li><li><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/584.html">母婴用品</a>
+            <div class="submenu">
+                <div class="leftdiv">
+                	<dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/585.html">孕产妈妈</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/586.html">孕期维生素</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/587.html">孕期矿物质</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/588.html">产后滋补</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/589.html">吸奶器</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/590.html">防辐射服</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/591.html">乳头保护</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/592.html">爱乐</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/593.html">维斯利</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/594.html">安玛特纳</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/595.html">福施福</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/596.html">生乳汁</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/597.html">乳酸钙颗粒</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/598.html">小儿用药</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/599.html">儿童维生素</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/600.html">补钙补锌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/601.html">小儿腹泻</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/602.html">小儿感冒</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/603.html">退烧消炎</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/604.html">儿童湿疹</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/605.html">佝偻病</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/606.html">小儿咽炎</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/607.html">外用治疗</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/608.html">退热</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/609.html">儿童创可贴</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/610.html">儿童口罩</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/611.html">疝气治疗带</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/612.html">儿童体温计</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/613.html">胎心仪</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/614.html">蚊不叮 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/615.html">冰宝</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/616.html">儿童成长</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/617.html">沐浴露</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/618.html"> 洗发精 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/619.html">香皂</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/620.html">润肤露</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/621.html">纸尿裤</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/622.html">婴儿服</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/623.html">奶瓶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/624.html">餐具</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/625.html">防撞保护奶癣膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/626.html">爽身粉</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/627.html">营养辅食</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/628.html">钙铁锌硒维生素</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/629.html">婴儿配方粉复合营养素</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/829.html">孕妈专区</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/830.html">母乳喂养</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1094.html">儿科用药</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1095.html">小儿止咳化痰</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/1098.html">小儿便秘/腹泻</a>                        </dd>
+                    </dl>                </div>
+            </div>
+        </li><li><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/630.html">滋补养生</a>
+            <div class="submenu">
+                <div class="leftdiv">
+                	<dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/631.html">中药细粉</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/632.html">玛卡</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/633.html">鹿茸鹿鞭 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/634.html">阿胶</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/635.html">西洋参</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/636.html">海狗油 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/637.html"> 蛋白粉</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/638.html">螺旋藻</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/639.html">蜂制品</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/640.html">枸杞 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/641.html">菊花</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/642.html">莲子</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/643.html">灵芝</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/644.html">雪蛤</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/645.html">人参</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/646.html">怀山药</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/647.html">精品礼盒</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/648.html">海产品</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/649.html">灵芝类</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/650.html">鹿茸类</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/651.html">人参类</a>                        </dd>
+                    </dl>                </div>
+            </div>
+        </li><li><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/652.html">保健用品</a>
+            <div class="submenu">
+                <div class="leftdiv">
+                	<dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/653.html">中老年保健用品</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/654.html">维生素片</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/655.html">狮王</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/656.html">云南白药</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/657.html">黑人</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/658.html">舒适达</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/659.html">佳洁士</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/660.html">舒客</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/661.html">高露洁</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/662.html">冷酸灵</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/663.html">中华</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/664.html">竹盐</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/665.html">老年保健用品</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/666.html">皓齿洁</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/667.html">上海防酸</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/832.html">婴幼儿保健用品</a></dt>
+                        <dd>
+                        	                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/833.html">夫妻保健用品</a></dt>
+                        <dd>
+                        	                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/834.html">治疗保健用品</a></dt>
+                        <dd>
+                        	                        </dd>
+                    </dl>                </div>
+            </div>
+        </li><li class=""><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/676.html">药品原料</a>
+            <div class="submenu">
+                <div class="leftdiv">
+                	<dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/677.html">药妆</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/678.html">森田药妆</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/679.html">片仔癀</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/680.html">伊丽莎白雅顿</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/681.html">瓷肌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/682.html">薇诺娜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/683.html">花印</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/684.html">婵真</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/685.html">奇力康</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/686.html">薇姿</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/687.html">欧敏肤</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/688.html">面部护理</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/689.html">维生素E乳</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/690.html">柔润保湿霜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/691.html">片仔癀珍珠霜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/692.html">玫瑰红润白皙面贴膜 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/693.html">银杏补水润肤面贴膜 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/694.html">灵芝驻颜滋养面贴膜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/695.html">红石榴水润透白面贴膜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/696.html">珍珠雪肤莹白面贴膜 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/697.html"> 银杏去黄亮白面贴膜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/698.html">曼秀雷敦男士润唇膏 </a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/699.html">洗发</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/700.html">飘柔</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/701.html">霸王</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/702.html">滋源</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/703.html">李时珍</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/704.html">康王</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/705.html">茶树</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/706.html">护发</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/707.html">沙金防脱固发洗发水</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/708.html">霸王女士防脱洗发液  </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/709.html">秀术米醋防脱洗发露</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/710.html">索芙特防脱育发香波 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/711.html">霸王防脱洗发液 </a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/712.html">身体护理</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/713.html">绵羊油润肤霜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/714.html">凡士林润肤霜 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/715.html">爆拆灵</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/716.html">润肤霜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/717.html">南雪祛痘霜 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/718.html">鳄油冻疮消乳膏 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/719.html">美疤克凝胶剂 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/720.html">痘立克祛黄亮白组合</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/721.html">身体乳</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/722.html">片仔癀珍珠膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/723.html">止汗露喷雾</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/724.html">金芦荟痘胶膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/725.html">婴宝</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/726.html">甲正王除臭液 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/727.html">腋留芳狐臭水 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/728.html">狐臭香体露 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/729.html">羚锐西施露</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/730.html">名露腋臭露</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/731.html">狐臭净香液</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/732.html">名露腋臭剂Ⅱ</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/733.html">趣味狐臭液 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/734.html">西施丽香体露 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/735.html">双重营养滋润</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/736.html">儿童蜂蜜柔嫩霜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/737.html">蛇脂维肤膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/738.html">协和眼部抗皱精华原液 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/739.html">  特润护臀膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/740.html">儿童芦荟柔嫩霜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/741.html">协和去痘康肤原液 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/742.html">协和疤痕修复原液</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/743.html">协和去红血丝修复原液 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/744.html">舒缓控油洁面泡沫</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/745.html">瑞芙脱毛膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/746.html"> 快速脱毛霜 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/747.html">欣靓脱毛膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/748.html">金榄脱毛膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/749.html">羚锐脱毛膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/750.html">露兰姬娜脱毛膏</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/751.html">艾恋脱毛膏 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/752.html"> 弘信脱毛膏 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/753.html">脱毛霜</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/754.html">手足护理</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/755.html">成人纸尿裤 </a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/855.html">其他</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/756.html">女性护理</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/757.html">妇炎洁</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/758.html">娇妍</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/759.html">ABC</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/760.html">夏依</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/761.html">洁尔阴</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/762.html">三洋</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/763.html">采幽</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/764.html">西妮</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/765.html">阿希米</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/766.html">施巴</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/767.html">佳茵</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/768.html">男性护理</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/769.html">曼秀雷敦</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/770.html">欧莱雅</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/771.html">妮维雅</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/772.html">高夫</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/773.html">百雀羚</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/774.html">波斯顿</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/775.html">杰威尔</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/776.html">大宝</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/777.html">相宜本草</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/778.html">李医生</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/779.html">阿迪达斯</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/780.html">美发护理</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/781.html">资生堂专业美发</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/782.html">康夫</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/783.html">沙宣</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/784.html">奔腾</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/785.html">金元</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/786.html">日威</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/787.html">莎婷</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/788.html">玫姬</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/789.html">芊念</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/790.html">眼睛护理</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/791.html">优能</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/792.html">海昌</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/793.html">博士伦</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/794.html">卫康</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/795.html">特瑞士</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/796.html">好视力</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/797.html">爱尔康</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/798.html">诺思</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/799.html">韩姬儿</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/800.html">晰雅</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/801.html">艾乐视</a>                        </dd>
+                    </dl><dl>
+                        <dt><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/802.html">彩妆</a></dt>
+                        <dd>
+                        	<a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/803.html">卡姿兰</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/804.html">兰蔻</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/805.html">悦诗风吟</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/806.html">纪梵希</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/807.html">迪奥</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/808.html">美宝莲</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/809.html">兰芝</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/810.html">圣罗兰</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/811.html">娇兰</a><a href="http://www.xb1y.com/index.php/Home/Index/cateClass/cate_id/812.html">丝芙兰</a>                        </dd>
+                    </dl>                </div>
+            </div>
+        </li>    </ul>
+    <div class="pic-slider">
+        <div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul>
+                	<li class="">1</li><li class="">2</li><li class="on">3</li>                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                	<li class="" style="display: none;"><a href="javascript:void(0)" target="_blank"><img src="/西北医药网-更专业的医药交易服务平台_files/1550650371TiNctCdM.jpg"></a></li><li style="display: none;" class=""><a href="javascript:void(0)" target="_blank"><img src="/西北医药网-更专业的医药交易服务平台_files/1550650383pPso4LjH.jpg"></a></li><li style="display: list-item; opacity: 0.5644;"><a href="javascript:void(0)" target="_blank"><img src="/西北医药网-更专业的医药交易服务平台_files/1550649774NTkn8JSN.jpg"></a></li>                </ul>
+            </div>
+
+            <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+            <a class="prev" href="javascript:void(0)"></a>
+            <a class="next" href="javascript:void(0)"></a>
+
+        </div>
+
+        <script type="text/javascript">
+            jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+        </script>
+
+    </div>
+    <div class="navpic-rt">
+         <ul class="navpicrt-top">
+             <li>
+                 <img src="/西北医药网-更专业的医药交易服务平台_files/index_14.png">
+                 <p>权威荣誉</p>
+             </li>
+             <li>
+                 <img src="/西北医药网-更专业的医药交易服务平台_files/index_16.png">
+                 <p>品牌授权</p>
+             </li>
+             <li>
+                 <img src="/西北医药网-更专业的医药交易服务平台_files/index_18.png">
+                 <p>正品保险</p>
+             </li>
+             <li>
+                 <img src="/西北医药网-更专业的医药交易服务平台_files/index_24.png">
+                 <p>药监认证</p>
+             </li>
+             <li>
+                 <img src="/西北医药网-更专业的医药交易服务平台_files/index_26.png">
+                 <p>退货无忧</p>
+             </li>
+             <li>
+                 <img src="/西北医药网-更专业的医药交易服务平台_files/index_27.png">
+                 <p>隐私包装</p>
+             </li>
+         </ul>
+        <p class="navpicrt-tel">400-0097-600</p>
+         <p class="fastshop">
+					<a href="http://www.xb1y.com/index.php/Home/Index/shopping.html" style="color: #ffffff;">快速采购</a> 
+					</p>
+        <div class="navpicrt-signin">
+        	              <p>用户登录     |  注册</p>
+              <ul>
+                  <li><a href="http://www.xb1y.com/index.php/Home/Member/Member_login.html">登录</a></li>
+                  <li><a href="http://www.xb1y.com/index.php/Home/Member/Member_register.html" style="background-color:#377bee;">注册</a></li>
+              </ul>        </div>
+    </div>
+</div>
+<!--限时秒杀栏目-->
+<div class="xianshimiaosha">
+     <div class="picScroll-left">
+        <h4>今日限时秒杀</h4>
+        <p style="float:left;margin-top: 10px"><span id="times">限时1小时19分11秒</span></p>
+        <script>
+            function fresh()
+            {
+                var endtime=new Date("2019-04-11 15:00:00");
+                var nowtime = new Date();
+                var leftsecond=parseInt((endtime.getTime()-nowtime.getTime())/1000);
+                d=parseInt(leftsecond/3600/24);
+                h=parseInt((leftsecond/3600)%24);
+                m=parseInt((leftsecond/60)%60);
+                s=parseInt(leftsecond%60);
+                
+                document.getElementById("times").innerHTML="限时"+h+"小时"+m+"分"+s+"秒";
+                if(leftsecond<=0){
+                    document.getElementById("times").innerHTML="<span style='color:red'>抢购已结束</span>";
+                    clearInterval(sh);
+                }
+            }
+            fresh();
+            var sh;
+            sh=setInterval(fresh,1000);
+        </script>
+
+        <a href="http://www.xb1y.com/index.php/Home/Activityzone/ActivityInfo/act/1.html" class="xiaqiyugao" target="_blank">下期预告&gt;</a>
+        <div class="hd">
+            <a class="next"></a>
+            <a class="prev"></a>
+        </div>
+
+        <div class="bd">
+            <ul class="picList">
+            	            </ul>
+        </div>
+    </div> 
+</div>
+
+
+ <script type="text/javascript">
+    jQuery(".picScroll-left").slide({
+    	titCell:".hd ul",
+    	mainCell:".bd ul",
+    	autoPage:true,
+    	effect:"left",
+        autoPlay:true,
+        scroll:6,
+        vis:6,//每次显示数量
+        mouseOverStop:false
+    });
+</script>
+
+<!--首页中间广告位的广告栏目--的广告栏目-->
+ <div class="small-pic">
+   <div class="smallpic-slider">
+          <a href="http://www.xb1y.com/www.baidu.com"><img src="/西北医药网-更专业的医药交易服务平台_files/598abd9a94247.png"></a>
+	   </div>
+</div> 
+<!--中间的内容-->
+<div class="index-container" id="001">
+    <div class="newsfabu-title">
+        <h3>最新发布的商品</h3>
+        <a href="http://www.xb1y.com/index.php/Home/Index/cateClass.html">更多&gt;&gt;</a>
+    </div>
+    <!--tab切换-->
+	<style type="text/css">
+        /* box */
+        .box{width:1200px;background:#fff;}
+
+        .tab_menu{overflow:hidden;}
+
+        .tab_menu li{width:240px;float:left;color:#fff;background:#093;cursor:pointer;
+                        line-height: 50px;height: 50px;margin:10px 30px 0 30px;
+                         text-indent: 20px;
+        }
+        .tab_menu li img{
+            float: left;
+            margin-top: 5px;
+            margin-left: 50px;
+        }
+
+        .tab_menu li a{color:#fff;text-decoration:none;}
+
+        .tab_menu li.current a{color:#333;}
+
+
+        .tab_box .hide{display:none;}
+        .news-index-pricestyle{
+            width: 90%!important;
+            margin: 0 auto;
+            background-color: #fff;
+            overflow: hidden;
+            color: #d81b24;
+            margin-top: 5px;
+        }
+        .news-pricestyle-right{
+            float: right;
+            color: #666666;
+            text-decoration: line-through;
+            font-style: normal;
+            font-weight: normal;
+            padding-right: 8px;
+        }
+        .active-addcars{
+            display: block;
+            width: 90%!important;
+            margin: 10px 5%;
+            line-height: 36px;
+            color: #ffffff;
+            background:#fd0539 url("images/index_08.png") no-repeat 40px center;
+        }
+		.changebg-04style li{
+			/*background-color: #ffeee0!important;*/
+		}
+    </style>
+	<div class="box demo2">
+
+        <ul class="tab_menu">
+			<li style="background-color:#ff307c;" onclick="location.href=&#39;/index.php/Home/Index/index/k/1.html#001&#39;"><img src="/西北医药网-更专业的医药交易服务平台_files/index-listicon_02.png">中西药品</li>
+            <li style="background-color:#117cda;" onclick="location.href=&#39;/index.php/Home/Index/index/k/214.html#001&#39;"><img src="/西北医药网-更专业的医药交易服务平台_files/index-listicon_04.png">医疗器械</li>
+            <li style="background-color:#0cde42;" onclick="location.href=&#39;/index.php/Home/Index/index/k/273.html#001&#39;"><img src="/西北医药网-更专业的医药交易服务平台_files/index-listicon_08.png">成人用品</li>
+            <li style="background-color:#ff9642;" onclick="location.href=&#39;/index.php/Home/Index/index/k/360.html#001&#39;"><img src="/西北医药网-更专业的医药交易服务平台_files/index-listicon_14.png">中药饮片</li>
+        </ul>
+
+        <div class="tab_box">
+
+            <div>
+                <div class="shoppic-box">
+                    <div class="shop-piclf">
+													<ul class="goods-box">							
+														<div class="shop-toplf">
+							                                   <a href="http://xb1y.com/index.php/Home/Goods/goodInfo/id/183.html">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/5a4343329560c.jpg">
+                                </a>
+                            </div>
+							<li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/926.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/1541667516E2DUUslk.png">
+                                    <h3></h3>
+                                    <span style="text-indent: 10px;">规格：颗粒剂，每袋装15克，15g*10袋</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(926)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">用于风热感冒，症见发热头痛，咳嗽口干，咽喉疼痛</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">颗粒剂，每袋装15克，15g*10袋</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">广西邦琪药业集团</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/926.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/925.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/1541658009yAdXxZyZ.jpg">
+                                    <h3>112233</h3>
+                                    <span style="text-indent: 10px;">规格：复方</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(925)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">适用于缓解普通感冒及流行性感冒引起的发热、头痛、四肢酸痛、打喷嚏、流鼻涕、鼻塞、咽痛等症状</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">复方</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">广西邦琪药业集团</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/925.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/924.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/1540177805btLCz6am.png">
+                                    <h3>病好颗粒</h3>
+                                    <span style="text-indent: 10px;">规格：12片*4板*150盒</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(924)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">用于癫狂心乱，痰迷心窍，神志昏迷，四肢抽搐，口角流涎。</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">12片*4板*150盒</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">长春银诺克药业</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/924.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/923.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/1539959018FmaqwyhP.png">
+                                    <h3>11111</h3>
+                                    <span style="text-indent: 10px;">规格：每袋重10克（含对乙酰氨基酚0.2克）。</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(923)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">解热镇痛。用于感冒引起的头痛，发热，鼻塞，流涕，咽痛。</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">每袋重10克（含对乙酰氨基酚0.2克）。</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">广西邦琪药业集团</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/923.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/919.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/15344943647aDsWgHF.png">
+                                    <h3>测试111</h3>
+                                    <span style="text-indent: 10px;">规格：每片重0.5克（含对乙酰氨基酚130毫克、马来酸氯苯那敏2毫克、咖啡因2毫克）</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(919)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">解热镇痛。用于感冒引起的头痛发热，鼻塞，咳嗽，咽喉痛。</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">每片重0.5克（含对乙酰氨基酚130毫克、马来酸氯苯那敏2毫克、咖啡因2毫克）</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">广西邦琪药业集团</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/919.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/918.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/1530864807t2xrxjKW.png">
+                                    <h3>感冒软胶囊</h3>
+                                    <span style="text-indent: 10px;">规格：0.425g27粒</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(918)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">&nbsp;散风解热。用于外感风寒引起的头痛发热，鼻塞流涕，恶寒无汗，骨节酸痛，咽喉肿痛。</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">0.425g27粒</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">吉林省通化博祥药业股份有限公司</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/918.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/914.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/1526883791oWkJmZNl.jpg">
+                                    <h3>（远程）阿莫西林胶囊</h3>
+                                    <span style="text-indent: 10px;">规格：0.25克*24粒</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(914)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">阿莫西林适用于敏感菌（不产β内酰胺酶菌株）所致的下列感染： 1．溶血链球菌、肺炎链球菌、葡萄球菌或流感嗜血杆菌所致中耳炎、鼻窦炎、咽炎、扁桃体炎等上呼吸道感染。 2．大肠埃希菌、奇异变形杆菌或粪肠球菌所致的泌尿生殖道感染。 3．溶血链球菌、葡萄球菌或大肠埃希菌所致的皮肤软组织感染。 4．溶血链球菌、肺炎链球菌、葡萄球菌或流感嗜血杆菌所致急性支气管炎、肺炎等下呼吸道感染。 5．急性单纯性淋病。 6．本品尚可用于治疗伤寒、伤寒带菌者及钩端螺旋体病；阿莫西林亦可与克拉霉素、兰索拉唑三联用药根除胃、十二指肠幽门螺</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">0.25克*24粒</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">海润(秦皇岛)药业有限公司</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/914.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/913.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/1526883722Jlb56lEj.jpg">
+                                    <h3>（远程）*奥美拉唑肠溶胶囊（板装）</h3>
+                                    <span style="text-indent: 10px;">规格：20mg*42粒</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(913)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">适用于胃溃疡、十二指肠溃疡、应激性溃疡、返流性食管炎和卓一艾氏综合症</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">20mg*42粒</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">烟台鲁银药业有限公司</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/913.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/912.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/1526883654ubX1ILnz.jpg">
+                                    <h3>（远程）*奥美拉唑肠溶胶囊</h3>
+                                    <span style="text-indent: 10px;">规格：20mg*28粒</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(912)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">适用于胃溃疡、十二指肠溃疡、应激性溃疡、返流性食管炎和卓一艾氏综合症(胃泌素瘤)。</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">20mg*28粒</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">烟台鲁银药业有限公司</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/912.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/911.html" target="_blank">
+                                    <img src=/西北医药网-更专业的医药交易服务平台_files/1526883591Wo0vc40O.jpg">
+                                    <h3>（远程）硝苯地平缓释片</h3>
+                                    <span style="text-indent: 10px;">规格：20毫克*20片</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(911)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;"> 1.慢性稳定性心绞痛(劳累型心绞痛)。 2.血管痉挛型心绞痛(Prinzmetal's心绞痛、变异型心绞痛) 3.原发性高血压。</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">20毫克*20片</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">山西云鹏制药有限公司</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/911.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/910.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/1526883524Fr0iZYaz.jpg">
+                                    <h3>（远程）复方穿心莲片</h3>
+                                    <span style="text-indent: 10px;">规格：12片*2板</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(910)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">清热解毒，利湿。用于风热感冒，咽喉疼痛，湿热泄泻。</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">12片*2板</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">广西北部湾制药股份有限公司</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/910.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/909.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/1526883348Qivr8HTw.jpg">
+                                    <h3>（远程）血塞通分散片</h3>
+                                    <span style="text-indent: 10px;">规格：19.2mg*12片</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(909)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">活血祛瘀，通脉活络，抑制血小板聚集和增加脑血流量。用于脑路瘀阻，中风偏瘫，心脉瘀阻，胸痹心痛；脑血管病后遗症，冠心病心绞痛属上述证候者。</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">19.2mg*12片</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">安徽国森药业有限公司</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/909.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li><li class="cp-list" style="position:relative">
+                                <a href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/908.html" target="_blank">
+                                    <img src="/西北医药网-更专业的医药交易服务平台_files/1526882754MMSzUUxq.jpg">
+                                    <h3>（远程）苯磺酸氨氯地平片</h3>
+                                    <span style="text-indent: 10px;">规格：5毫克*28片</span>
+																		   <h3 class="news-index-pricestyle" style="text-indent: 0">价格：认证后可见</h3>                                    
+                                   </a><a href="javascript:void(0);" onclick="add_cart(908)" class="active-addcars">
+                                        加入购物车
+                                    </a> 
+                                
+								<div class="cp-show" style="position:absolute;width:100%;height:235px;;left:0;top:0;z-index:-1;background-color:rgba(51,57,57,0.8);padding:25px 10px;color:#fff;box-sizing:border-box">
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">功能：</span>
+										<span style="float:left;width:120px;">​1. 高血压(单独或与其他药物合并使用)。
+2. 心绞痛：尤其自发性心绞痛(单独或与其他药物合并使用)。</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">规格：</span>
+										<span style="float:left;width:120px;">5毫克*28片</span>
+									</p>
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap">
+										<span style="float:left;width:80px;text-align:right">厂商：</span>
+										<span style="float:left;width:120px;">山西华元医药生物技术有限公司</span>
+									</p>
+									
+									<p style="text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;position:absolute;right:20px;bottom:10px;">
+										
+										 <a style=" float:left;width:100%;text-align:right;color:#fff;padding:3px 0;margin-top:2px;" href="http://www.xb1y.com/index.php/Home/Goods/goodInfo/id/908.html" target="_blank">查看详情 &gt;</a>
+										 
+									</p>
+									
+								</div>
+                            </li>							                        </ul>
+						<ul class="tab_menu">
+							<li style="background-color:#0cde42;" onclick="location.href=&#39;/index.php/Home/Index/index/k/584.html#001&#39;"><img src="/西北医药网-更专业的医药交易服务平台_files/index-listicon_12.png">母婴用品</li>
+							<li style="background-color:#ff9642;" onclick="location.href=&#39;/index.php/Home/Index/index/k/630.html#001&#39;"><img src="/西北医药网-更专业的医药交易服务平台_files/index-listicon_10.png">滋补养生</li>
+							<li style="background-color:#ff307c;" onclick="location.href=&#39;/index.php/Home/Index/index/k/652.html#001&#39;"><img src="/西北医药网-更专业的医药交易服务平台_files/index-listicon_06.png">保健用品</li>
+							<li style="background-color:#117cda;" onclick="location.href=&#39;/index.php/Home/Index/index/k/676.html#001&#39;"><img src="/西北医药网-更专业的医药交易服务平台_files/index-listicon_16.png">个户美妆</li>
+						</ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!--相关企业-->
+    <div class="link-index" style="margin-top: 20px;">
+        <h3>
+            相关企业
+        </h3>
+        <ul class="index-linka">
+        	<li>
+                <!-- <a href="/index.php/Home/Store/storeInfo/id/2.html" target="_blank">
+				<a href="#">
+                    <img src="/Uploads/store/14542058306.jpg">
+                </a> -->
+				<div class="xg-list">
+					<div class="xg-img">
+						<img src="/西北医药网-更专业的医药交易服务平台_files/14542058306.jpg" alt="">
+					</div>
+					<div class="xg-right">
+						<p class="xg-righttitle">安徽立药</p>
+						<a href="http://www.xb1y.com/index.php/Home/Store/storeInfo/id/2.html"><div class="xg-rightbtn">进入旗舰店&nbsp; &gt;</div></a>
+					</div>
+				</div>
+            </li><li>
+                <!-- <a href="/index.php/Home/Store/storeInfo/id/9.html" target="_blank">
+				<a href="#">
+                    <img src="/Uploads/Banner/20170925/1506307608TWyQX0ck.jpg">
+                </a> -->
+				<div class="xg-list">
+					<div class="xg-img">
+						<img src="/西北医药网-更专业的医药交易服务平台_files/1506307608TWyQX0ck.jpg" alt="">
+					</div>
+					<div class="xg-right">
+						<p class="xg-righttitle">安徽立药</p>
+						<a href="http://www.xb1y.com/index.php/Home/Store/storeInfo/id/9.html"><div class="xg-rightbtn">进入旗舰店&nbsp; &gt;</div></a>
+					</div>
+				</div>
+            </li><li>
+                <!-- <a href="/index.php/Home/Store/storeInfo/id/14.html" target="_blank">
+				<a href="#">
+                    <img src="/Uploads/Banner/20180320/1521528199VLbXZ8Rb.png">
+                </a> -->
+				<div class="xg-list">
+					<div class="xg-img">
+						<img src="/西北医药网-更专业的医药交易服务平台_files/1521528199VLbXZ8Rb.png" alt="">
+					</div>
+					<div class="xg-right">
+						<p class="xg-righttitle">安徽立药</p>
+						<a href="http://www.xb1y.com/index.php/Home/Store/storeInfo/id/14.html"><div class="xg-rightbtn">进入旗舰店&nbsp; &gt;</div></a>
+					</div>
+				</div>
+            </li><li>
+                <!-- <a href="/index.php/Home/Store/storeInfo/id/18.html" target="_blank">
+				<a href="#">
+                    <img src="/Uploads/Banner/20180119/1516346798fw6EnoNm.png">
+                </a> -->
+				<div class="xg-list">
+					<div class="xg-img">
+						<img src="/西北医药网-更专业的医药交易服务平台_files/1516346798fw6EnoNm.png" alt="">
+					</div>
+					<div class="xg-right">
+						<p class="xg-righttitle">安徽立药</p>
+						<a href="http://www.xb1y.com/index.php/Home/Store/storeInfo/id/18.html"><div class="xg-rightbtn">进入旗舰店&nbsp; &gt;</div></a>
+					</div>
+				</div>
+            </li><li>
+                <!-- <a href="/index.php/Home/Store/storeInfo/id/20.html" target="_blank">
+				<a href="#">
+                    <img src="/Uploads/Banner/20180131/1517381706bAhaMudG.jpg">
+                </a> -->
+				<div class="xg-list">
+					<div class="xg-img">
+						<img src="/西北医药网-更专业的医药交易服务平台_files/1517381706bAhaMudG.jpg" alt="">
+					</div>
+					<div class="xg-right">
+						<p class="xg-righttitle">安徽立药</p>
+						<a href="http://www.xb1y.com/index.php/Home/Store/storeInfo/id/20.html"><div class="xg-rightbtn">进入旗舰店&nbsp; &gt;</div></a>
+					</div>
+				</div>
+            </li><li>
+                <!-- <a href="/index.php/Home/Store/storeInfo/id/26.html" target="_blank">
+				<a href="#">
+                    <img src="">
+                </a> -->
+				<div class="xg-list">
+					<div class="xg-img">
+						<img src="http://www.xb1y.com/" alt="">
+					</div>
+					<div class="xg-right">
+						<p class="xg-righttitle">安徽立药</p>
+						<a href="http://www.xb1y.com/index.php/Home/Store/storeInfo/id/26.html"><div class="xg-rightbtn">进入旗舰店&nbsp; &gt;</div></a>
+					</div>
+				</div>
+            </li><li>
+                <!-- <a href="/index.php/Home/Store/storeInfo/id/45.html" target="_blank">
+				<a href="#">
+                    <img src="">
+                </a> -->
+				<div class="xg-list">
+					<div class="xg-img">
+						<img src="http://www.xb1y.com/" alt="">
+					</div>
+					<div class="xg-right">
+						<p class="xg-righttitle">安徽立药</p>
+						<a href="http://www.xb1y.com/index.php/Home/Store/storeInfo/id/45.html"><div class="xg-rightbtn">进入旗舰店&nbsp; &gt;</div></a>
+					</div>
+				</div>
+            </li>			
+<style>
+.xg-list{width:300px;height:80px;background: #f9f9f9;border:1px solid #e5e5e5;box-sizing: border-box;padding:12.5px 10px;}
+.xg-img{width:125px;height:55px;float:left;}
+.xg-img img{width:100%;height:100%;display: block;}
+.xg-right{width:135px;height:55px;float:right;}
+.xg-righttitle{font-size:#333333;font-size:16px;}
+.xg-rightbtn{width:105px;height:20px;background: #377bee;color:#fff;line-height: 20px;text-align: center;margin-top:10px;}
+</style>
+			
+        </ul>
+    </div>
+    <!--相关链接-->
+    <div class="link-index">
+        <h3>相关链接</h3>
+        <ul class="index-linka">
+        	<li>
+				<a href="http://www.yingsheng.com/" target="_black">
+                    <img src="/西北医药网-更专业的医药交易服务平台_files/1511839956lysP2juO.png" alt="英盛网">
+                </a>
+            </li><li>
+				<a href="http://re.1688.com/" target="_black">
+                    <img src="/西北医药网-更专业的医药交易服务平台_files/14839547841U0VLueN.jpg" alt="阿里巴巴">
+                </a>
+            </li><li>
+				<a href="http://www.jd.com/" target="_black">
+                    <img src="/西北医药网-更专业的医药交易服务平台_files/1483954777wXACMxaJ.jpg" alt="京东">
+                </a>
+            </li><li>
+				<a href="http://www.qq.com/" target="_black">
+                    <img src="/西北医药网-更专业的医药交易服务平台_files/1484214402bZHS723h.jpg" alt="腾讯">
+                </a>
+            </li><li>
+				<a href="http://www.sina.com.cn/" target="_black">
+                    <img src="/西北医药网-更专业的医药交易服务平台_files/1483954559VVhb0c45.jpg" alt="新浪">
+                </a>
+            </li><li>
+				<a href="http://www.163.com/" target="_black">
+                    <img src="/西北医药网-更专业的医药交易服务平台_files/1483954520FnOeJiNT.jpg" alt="网易">
+                </a>
+            </li><li>
+				<a href="http://www.sohu.com/" target="_black">
+                    <img src="/西北医药网-更专业的医药交易服务平台_files/1483954370jTbPfgVf.png" alt="搜狐">
+                </a>
+            </li><li>
+				<a href="http://www.baidu.com/" target="_black">
+                    <img src="/西北医药网-更专业的医药交易服务平台_files/14839542986RcsR2tP.jpg" alt="百度">
+                </a>
+            </li>        </ul>
+    </div>
+</div>
+<a hidden="hidden" href="http://webscan.360.cn/index/checkwebsite/url/xb1y.com" name="a79eb15536cc0167fc792973c4d3ddba">360网站安全检测平台</a>
+
+        
+<script src="/西北医药网-更专业的医药交易服务平台_files/jquery.tabs.js.下载"></script>
+<script src="/西北医药网-更专业的医药交易服务平台_files/jquery.lazyload.js.下载"></script>
+<script type="text/javascript">
+    $(function(){
+        $("img[original]").lazyload({ placeholder:"images/color3.gif" });
+        $('.demo2').Tabs({
+            event:'click'
+        });
+        //部分区域图片延迟加载
+        function lazyloadForPart(container) {
+            container.find('img').each(function () {
+                var original = $(this).attr("original");
+                if (original) {
+                    $(this).attr('src', original).removeAttr('original');
+                }
+            });
+        }
+    });
+	function add_cart(id){
+		$.post("/index.php/Home/Goods/add_cart.html", {id:id,num:1}, 
+			function (data) {
+			data = eval("("+data+")");
+			if(data.status){
+				layer.msg(data.msg, {icon: 1});
+				//按钮不可用 更改颜色、value
+			}else{
+				layer.alert(data.msg);
+			}
+		});
+	}
+	$('.cp-list').hover(function(){
+		$(this).find($('.cp-show')).css('zIndex',2)
+	},function(){
+		$(this).find($('.cp-show')).css('zIndex',-2)
+	})
+</script>
+
+    </section>
+</div>
+
+</div>
+    <!--底部内容-->
+<div class="footer-box">
+    <div class="footer-link" style="height:215px;">
+         <ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">采购指南  </li>
+			
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/shrz.html">商户入驻</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/dllc.html">代理流程</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/mjgmlc.html">购买流程</a></li>
+        </ul>
+        <ul class="footer-linka">
+            <li style="font-size:18px; border-bottom:1.5px solid #fff">支付方式 </li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/zxzf.html">在线支付</a></li>
+        </ul>
+        <ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">配送服务 </li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/smzt.html">上门自提</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/xsps.html">限时配送</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/psfwcx.html">配送服务查询</a></li>
+        </ul>
+        <ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">售后服务 </li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/thgz.html">退货规则</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/thlc.html">退货流程</a></li>
+        </ul> 
+        <ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">商家合作</li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/qycg.html">企业采购</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/xs.html">销售</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/dlr.html">代理人</a></li>
+        </ul>
+        <ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">关于我们</li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/lxwm.html">联系我们</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/qyjj.html">企业简介</a></li>
+        </ul>
+		<ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">帮助中心</li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/mmzh.html">密码找回</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/mmxg.html">密码修改</a></li>
+			<li><a href="http://www.xb1y.com/index.php/Home/Index/liuyan.html">意见与反馈</a></li>
+        </ul>
+        <div class="erweima-box">
+            <img src="/西北医药网-更专业的医药交易服务平台_files/erweima_03.png">
+            <p>扫描关注，微信二维码</p>
+        </div>
+    </div>
+    <div style="padding:15px;font-size:15px;text-align: center;color:#fff">备案号；陕ICP备18007246号-1</div>
+</div>
+<div class="footer-bottom">
+    <p>Copyright ©   西北医药网版权所有</p>
+</div>
+<script>
+    $(function(){
+        $.ajax({
+            'url':"/index.php/Home/AjaxMessage/index.html",
+            type:'get',
+            dataType:'json',
+            success:function(data){
+                if(data.status==1) {
+                    if(data.type===1){
+                    	layer.msg(data.message,{icon:1});
+                    }else{
+                    	layer.alert(data.message,{icon:2});
+                    }
+                }
+            }
+        })
+    })
+
+</script>
+
+</body></html>

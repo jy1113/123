@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://www.xb1y.com/index.php/Home/Drugshow/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>医药会展</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="/医药会展_files/common.css">
+<link rel="stylesheet" href="/医药会展_files/css.css">
+<script src="/医药会展_files/jQuery-2.2.0.min.js.下载"></script>
+<script src="/医药会展_files/layer.js.下载"></script><link rel="stylesheet" href="/医药会展_files/layer.css" id="layui_layer_skinlayercss" style="">
+<!--[if lt IE 9]>
+<script src="/Public/houtai/bootstrap/js/html5shiv.min.js"></script>
+<script src="/Public/houtai/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+<link rel="shortcut  icon" type="image/x-icon" href="http://www.xb1y.com/index.php/Home/Drugshow/favicon.ico" media="screen">
+
+    
+<link rel="stylesheet" href="/医药会展_files/common.css">
+<link rel="stylesheet" href="/医药会展_files/navregister.css">
+
+    <link rel="shortcut  icon" type="image/x-icon" href="http://www.xb1y.com/index.php/Home/Drugshow/favicon.ico" media="screen">
+</head>
+<body class="hold-transition skin-blue sidebar-mini" id="app">
+<div class="wrapper">
+    <header class="main-header">
+<div class="logotop">
+    <div class="logotop-bar">
+        <div class="logotop-lf">
+            Hi,欢迎来到西北医药网
+            <span>
+                【
+                <a href="http://www.xb1y.com/index.php/Home/Member/Member_login.html" style="color: #e57816;">请先登录</a>
+                |
+                <a href="http://www.xb1y.com/index.php/Home/Member/Member_register.html">注册</a>
+                                】
+            </span>
+        </div>
+        <ul class="logotop-rt">
+            <li>服务热线：400-0097-600</li>
+            <li><a href="http://www.xb1y.com/index.php/Home/MemberBuyer/MyOrder.html">我的订单 </a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Goods/user_cart.html">我的购物车</a></li> 
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#">帮助中心</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#">收藏网站</a></li>
+        </ul>
+    </div>
+</div>
+<!--logo栏目-->
+<div class="logobox" style="overflow:initial;height:120px;">
+    <div class="logoimg">
+        <a href="http://www.xb1y.com/index.php/Home/Index/index.html">
+            <img src="/医药会展_files/index_03.png" width="303" height="125">
+        </a>
+    </div>
+    <div class="logobox-rt" style="overflow:initial">
+        <form action="http://www.xb1y.com/index.php/Home/Index/search.html" method="get">
+            <div class="search-box" style="overflow:initial">
+                <input type="text" class="ss-input" name="key" value="" placeholder="请输入关键字进行搜索">
+                <button type="submit">搜索</button>
+				<div class="input-xlbox" id="zhaode">
+					
+						
+					
+				</div>
+            </div>
+        </form>
+		<script>
+			
+			$("body").on("input propertychange",".ss-input",function(){
+				 var name=$(".ss-input").val();
+				  // alert(name);
+				   $.ajax({
+						type:'post',
+						url:"/index.php/Home/Index/see.html",
+						data:{'name':name},
+						success:function(data){
+							if(data.state=='1'){
+								var html="";
+								//console.log(data.temp)
+								for(var i=0;i<data.temp.length;i++){
+									html +="<div class='xl-list' inclick>"+data.temp[i].goods_name +"</div>";
+								}
+								
+							   $("#zhaode").html(html);
+								
+							}
+						}
+					});
+				
+			}) 
+			var text22 = '';
+			$("#zhaode").on('mouseover',"div", function(){
+				 text22 = $(this).html()
+			    //$('.ss-input').val()
+			})
+			$('.ss-input').focus(function(){
+				$('.input-xlbox').show();
+				$('.input-xlbox').css('zIndex','999');
+				$('.input-xlbox').css('opacity','1');
+			});
+			$('.ss-input').blur(function(){
+				$('.input-xlbox').css('zIndex','-1');
+				$('.input-xlbox').css('opacity','0');
+				$(this).val(text22)
+			});
+			
+		</script>
+		<style>
+		.input-xlbox{position: absolute;width:350px;top:41px;left:-1px;background:#fff;border:1px solid #ff912f;display:none;}
+		.xl-list{width:100%;padding:5px;box-sizing:border-box;}
+		.xl-list:hover{background:#f2f2f2}
+		</style>
+        <div style="float:right;">
+					
+			  <a href="http://www.xb1y.com/index.php/Home/MemberBuyer/MemberBuyer_lackmedicine_add.html" class="drug-register">
+                <img src="/医药会展_files/index_06.png"> 缺药登记
+            </a>
+			
+		             <a href="http://www.xb1y.com/index.php/Home/Goods/user_cart.html" class="myshopping">
+                <img src="/医药会展_files/index_08.png">
+                我的购物车
+            </a> 
+        </div> 
+    </div>
+</div>
+<!--导航-->
+<div class="navbar">
+    <div class="navbox">
+        <h3>药品分类</h3>
+        <ul class="navbar-list">
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/index.html">首页</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Agent/index.html">招商/代理</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Board/index.html">上榜企业</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Information/index.html">数据中心</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Article/index.html">资讯平台</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html">医药会展</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Activityzone/index.html">活动专区</a></li> 
+        </ul>
+    </div>
+</div>
+</header>
+<div class="xb-rightbox">
+	<a href="http://www.xb1y.com/index.php/Home/Member/Member_index.html">
+		<div class="xb-right_list">
+			<img alt="" src="/医药会展_files/gr.png">
+			我的
+		</div>
+	</a>
+	 <a href="http://www.xb1y.com/index.php/Home/MemberBuyer/MyOrder.html">
+		<div class="xb-right_list">
+			<img alt="" src="/医药会展_files/dd.png">
+			订单
+		</div>
+	</a>
+	<a href="http://www.xb1y.com/index.php/Home/Goods/user_cart.html">
+		<div class="xb-right_list">
+			<img alt="" src="/医药会展_files/gwc.png">
+			购物车
+	
+		</div>
+	</a>
+	<a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#">
+		<div class="xb-right_list">
+			<img alt="" src="/医药会展_files/tw.png">
+			帮助
+		</div>
+	</a>
+	<a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#">
+		<div class="xb-right_list">
+			<img alt="" src="/医药会展_files/sc.png">
+			收藏
+		</div>
+	</a>
+</div>
+<style>
+.xb-rightbox{width:50px;height:655px;position: fixed;right:0;top:15%;background: #377bee;border-radius: 5px;padding:0 2.5px;box-sizing:border-box;color:#fff;text-align:center;}
+.xb-right_list{color:#fff;margin-top:50px;}
+.xb-right_list img{width:36px;}
+.xb-qq{margin:5px auto;width:20px;height:20px;border-radius:50%;background:#ff5a00;line-height:20px;font-size:12px;}
+</style>
+    <div class="content-wrapper">
+    <section class="content-header">
+        
+
+    </section>
+    <section class="content">
+        
+<!--位置导航-->
+<div class="location-now">
+    <div class="location-text">
+        <img src="/医药会展_files/compang_03.png">
+        当前位置： 首页 &gt;  医药会展
+    </div>
+</div>
+<!--医药会展-->
+<div class="exhibition-box">
+    <div class="exhibition-box-list">
+        <h1>药品精选</h1>
+
+        <script type="text/javascript">
+            /* 页面加载 */
+            $(function () {
+                initMyTableDrugs();
+            });
+
+            /* 页面查询 */
+            function initMyTableDrugs() {
+                var  content="";
+                $.ajax({
+                    url: "/query/querySelection",
+                    success: function (item) {
+                        $.each(item,function (index,obj) {
+                            content+=' <li>\n' +
+                                '                            <div class="productzs-imglist">\n' +
+                                '                                <div class="productimg-top">\n' +
+                                '                                    <a href="http://localhost:8010/Settlement/daili?id='+obj.id+'">\n' +
+                                '                                        <img src="'+obj.picture+'">\n' +
+                                '                                        <p class="prodct-newszs-name">'+obj.commodityInformation+'</p>\n' +
+                                '                                        <p class="prodct-newszs-name" style="color: #999">规格:'+obj.specifications+'</p>\n' +
+                                '                                        <h3 class="news-index-pricestyle" style="width: 96%">价格：'+obj.unitPrice+'</h3>                        </a>\n' +
+                                '                                </div>\n' +
+                                '                                <a href="javascript:void(0);" onclick="add_cart(650)" class="zs-shop">加入购物车</a>\n' +
+                                '                            </div>\n' +
+                                '                        </li>';
+                            $("#drugs").html(content);
+                        })
+
+                    }
+
+                })
+
+            }
+        </script>
+            <ul class="newszs-product" id="drugs"></ul>
+
+            <!--药品精选-->
+
+        <!--招商商品-->
+        <h1>招商商品</h1>
+        <ul class="zhaoshang-product">
+            <li>
+                <a href="http://www.xb1y.com/index.php/Home/Agent/zhaoshang.html">
+                   <img src="/医药会展_files/huizhan_11.png" alt="">
+                   <div class="yaoqi-title">
+                       <h5>中西药品</h5>
+                       <p>常备药这里都有</p>
+                   </div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.xb1y.com/index.php/Home/Agent/zhaoshang.html">
+                     <img src="/医药会展_files/huizhan_13.png" alt="">
+                    <div class="yaoqi-title">
+                        <h5>医疗器械</h5>
+                        <p>为健康保驾护航</p>
+                    </div>
+                </a>
+            </li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Agent/zhaoshang.html"><img src="/医药会展_files/huizhan_15.png" alt="">
+                <div class="yaoqi-title">
+                    <h5>母婴用品</h5>
+                    <p>品牌直供    质量保证</p>
+                </div>
+            </a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Agent/zhaoshang.html"><img src="/医药会展_files/huizhan_17.png" alt="">
+                <div class="yaoqi-title">
+                    <h5>滋补养生</h5>
+                    <p>滋补永不停歇</p>
+                </div>
+
+            </a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Agent/zhaoshang.html"><img src="/医药会展_files/huizhan_22.png" alt="">
+                <div class="yaoqi-title">
+                    <h5>中药调理</h5>
+                    <p>中药调理   健康生活</p>
+                </div>
+            </a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Agent/zhaoshang.html"><img src="/医药会展_files/huizhan_23.png" alt="">
+
+                <div class="yaoqi-title">
+                    <h5>成人用品</h5>
+                    <p>共享性福彼岸</p>
+                </div>
+            </a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Agent/zhaoshang.html"><img src="/医药会展_files/huizhan_24.png" alt="">
+                <div class="yaoqi-title">
+                    <h5>个户美妆</h5>
+                    <p>做一个多姿多彩的女人</p>
+                </div>
+
+            </a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Agent/zhaoshang.html"><img src="/医药会展_files/huizhan_25.png" alt="">
+                <div class="yaoqi-title">
+                    <h5>参茸细贵</h5>
+                    <p>享受生活    享受健康</p>
+                </div>
+
+            </a></li>
+        </ul>
+        <!--最新招商-->
+        <h1>最新招商</h1>
+        <ul class="newszs-product" id="investment">
+        <script type="text/javascript">
+            /* 页面加载 */
+            $(function () {
+                initMyTableInvestment();
+            });
+
+            /* 页面查询 */
+            function initMyTableInvestment() {
+                var  content="";
+                $.ajax({
+                    url: "/query/queryNewest",
+                    success: function (item) {
+                        $.each(item,function (index,obj) {
+                            content+=' <li>\n' +
+                                '                        <div class="productzs-imglist">\n' +
+                                '                            <div class="productimg-top">\n' +
+                                '                            <a href="http://localhost:8010/Settlement/daili">\n' +
+                                '                            <img src="'+obj.recruitImg+'">\n' +
+                                '                            <p class="prodct-newszs-name">'+obj.productName+'</p>\n' +
+                                '                            <strong>价格：'+obj.commodityPrice+'认证后可见</strong>' +
+                                '                            </a>\n' +
+                                '                        </div>\n' +
+                                '                        <a href="javascript:void(0);" onclick="layer.confirm(\'确定申请?\', {icon: 3, title:\'提示\'}, function(index){apply(51);layer.close(index);});" class="zs-shop">我要代理</a>\n' +
+                                '                            </div>\n' +
+                                '                            </li>'
+                            $("#investment").html(content);
+                        })
+
+                    }
+
+                })
+
+            }
+        </script>
+        <!--最新招商-->
+        </ul>
+
+        <!--药企精选-->
+        <h1>药企精选</h1>
+        <ul class="drug-company-selection">
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Drugshow/index.html#"><img src="/医药会展_files/huizhan_34.png"></a></li>
+        </ul>
+       <!-- &lt;!&ndash;招商信息下载&ndash;&gt;
+        <div class="zsinfo-download">
+            <a href="#">招商信息下载</a>
+        </div>-->
+    </div>
+</div>
+
+
+        
+<script>
+function apply(id){
+	data={'id':id};
+	$.ajax({
+		url:"/index.php/Home/Agent/ajax_applyToAgent.html",
+		data:data,
+		type:'post',
+		success:function(r){
+			 if(r.status==-1){
+				layer.alert(r.msg);
+				return false;
+			}
+			layer.msg(r.msg); 
+		}
+	})
+}
+function add_cart(id){
+	$.post("/index.php/Home/Goods/add_cart.html", {id:id,num:1}, 
+			function (data) {
+			data = eval("("+data+")");
+			if(data.status){
+				layer.msg(data.msg);
+				//按钮不可用 更改颜色、value
+			}else{
+				layer.alert(data.msg);
+			}
+		});
+	
+}
+</script>
+
+    </section>
+</div>
+
+</div>
+    <!--底部内容-->
+<div class="footer-box">
+    <div class="footer-link" style="height:215px;">
+         <ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">采购指南  </li>
+			
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/shrz.html">商户入驻</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/dllc.html">代理流程</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/mjgmlc.html">购买流程</a></li>
+        </ul>
+        <ul class="footer-linka">
+            <li style="font-size:18px; border-bottom:1.5px solid #fff">支付方式 </li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/zxzf.html">在线支付</a></li>
+        </ul>
+        <ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">配送服务 </li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/smzt.html">上门自提</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/xsps.html">限时配送</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/psfwcx.html">配送服务查询</a></li>
+        </ul>
+        <ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">售后服务 </li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/thgz.html">退货规则</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/thlc.html">退货流程</a></li>
+        </ul> 
+        <ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">商家合作</li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/qycg.html">企业采购</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/xs.html">销售</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/dlr.html">代理人</a></li>
+        </ul>
+        <ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">关于我们</li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/lxwm.html">联系我们</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/qyjj.html">企业简介</a></li>
+        </ul>
+		<ul class="footer-linka">
+            <li style="font-size:18px;border-bottom:1.5px solid #fff">帮助中心</li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/mmzh.html">密码找回</a></li>
+            <li><a href="http://www.xb1y.com/index.php/Home/Index/helpCenter/flag/mmxg.html">密码修改</a></li>
+			<li><a href="http://www.xb1y.com/index.php/Home/Index/liuyan.html">意见与反馈</a></li>
+        </ul>
+        <div class="erweima-box">
+            <img src="/医药会展_files/erweima_03.png">
+            <p>扫描关注，微信二维码</p>
+        </div>
+    </div>
+    <div style="padding:15px;font-size:15px;text-align: center;color:#fff">备案号；陕ICP备18007246号-1</div>
+</div>
+<div class="footer-bottom">
+    <p>Copyright ©   西北医药网版权所有</p>
+</div>
+<script>
+    $(function(){
+        $.ajax({
+            'url':"/index.php/Home/AjaxMessage/index.html",
+            type:'get',
+            dataType:'json',
+            success:function(data){
+                if(data.status==1) {
+                    if(data.type===1){
+                    	layer.msg(data.message,{icon:1});
+                    }else{
+                    	layer.alert(data.message,{icon:2});
+                    }
+                }
+            }
+        })
+    })
+
+</script>
+
+</body></html>

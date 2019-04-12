@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- Sql映射文件: 定义每一条sql语句  -->
+<!--
+	namespace:名称空间.
+			  1.目前可以随便写.
+			  2.如果将来使用的是Mapper接口开发，则namesapce必须写成接口的全类名.
+			         目的:将maapper接口与sql映射文件动态绑定.
+ -->
+<mapper namespace="com.jk.mapper.UserMapper">
+
+    <!--
+        select: 定义查询的sql语句
+        id:sql语句的唯一标示
+        resultType:声明返回值类型
+        #{id}: 从传递过来的参数中取出id值
+         -->
+    <select id="findAllUser" resultType="com.jk.model.User">
+
+        select * from t_user
+
+    </select>
+
+    <insert id="addUser">
+
+        insert into t_user(loginacct,userpswd,username,email,createtime) values (#{user.loginacct},#{user.userpswd},#{user.username},#{user.email},#{user.createtime})
+
+    </insert>
+
+    <delete id="delUserById">
+
+        delete from t_user where id =#{id}
+
+    </delete>
+
+    <select id="queryById" resultType="com.jk.model.User">
+
+        select * from t_user where id=#{id}
+
+    </select>
+
+    <update id="updateUser">
+
+         update t_user set loginacct = #{loginacct},userpswd = #{userpswd},
+			username = #{username},email = #{email},createtime = #{createtime}
+		where id = #{id}
+
+    </update>
+
+
+    <!--查询招商-->
+    <select id="queryNewest" resultType="com.jk.model.Newest">
+
+        select * from newest
+
+    </select>
+
+</mapper>
